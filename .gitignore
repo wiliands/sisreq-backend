@@ -1,5 +1,6 @@
+RemoteSystemsTempFiles
 /.metadata/
 **/target/
-RemoteSystemsTempFiles
-*/.settings
-sisreq-api/.classpath
+**/.classpath
+**/.project
+**/.settings/

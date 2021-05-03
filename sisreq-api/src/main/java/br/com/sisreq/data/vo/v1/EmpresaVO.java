@@ -1,6 +1,6 @@
 package br.com.sisreq.data.vo.v1;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.springframework.hateoas.RepresentationModel;
 
@@ -23,8 +23,8 @@ public class EmpresaVO extends RepresentationModel<EmpresaVO> implements ModeloV
 	private Long key;
 	private String nome;
 	private boolean ativo;
-	private Date dtExpiracao;
-	private Date dtCadastro;
+	private LocalDateTime dtExpiracao;
+	private LocalDateTime dtCadastro;
 
 	@Override
 	public Long getKey() {
@@ -46,19 +46,19 @@ public class EmpresaVO extends RepresentationModel<EmpresaVO> implements ModeloV
 		this.ativo = ativo;
 	}
 
-	public Date getDtExpiracao() {
+	public LocalDateTime getDtExpiracao() {
 		return dtExpiracao;
 	}
 
-	public void setDtExpiracao(Date dtExpiracao) {
+	public void setDtExpiracao(LocalDateTime dtExpiracao) {
 		this.dtExpiracao = dtExpiracao;
 	}
 
-	public Date getDtCadastro() {
+	public LocalDateTime getDtCadastro() {
 		return dtCadastro;
 	}
 
-	public void setDtCadastro(Date dtCadastro) {
+	public void setDtCadastro(LocalDateTime dtCadastro) {
 		this.dtCadastro = dtCadastro;
 	}
 

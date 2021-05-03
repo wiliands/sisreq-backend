@@ -5,7 +5,7 @@ package br.com.sisreq.exceptions;
  * @author wilian
  *
  */
-public class ExcecaoNegocio extends Exception {
+public class ExcecaoNegocio extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 

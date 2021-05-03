@@ -1,6 +1,6 @@
 package br.com.sisreq.data.vo.v1;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.springframework.hateoas.RepresentationModel;
 
@@ -26,7 +26,7 @@ public class UsuarioVO extends RepresentationModel<UsuarioVO> implements ModeloV
 	private String login;
 	private String senha;
 	private boolean ativo;
-	private Date dtExpiracao;
+	private LocalDateTime dtExpiracao;
 	private boolean administrador;
 	private String confirmaSenha;
 	
@@ -103,11 +103,11 @@ public class UsuarioVO extends RepresentationModel<UsuarioVO> implements ModeloV
 		this.ativo = ativo;
 	}
 
-	public Date getDtExpiracao() {
+	public LocalDateTime getDtExpiracao() {
 		return dtExpiracao;
 	}
 
-	public void setDtExpiracao(Date dtExpiracao) {
+	public void setDtExpiracao(LocalDateTime dtExpiracao) {
 		this.dtExpiracao = dtExpiracao;
 	}
 

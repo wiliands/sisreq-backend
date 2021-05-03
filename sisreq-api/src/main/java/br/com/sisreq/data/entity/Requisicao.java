@@ -1,6 +1,6 @@
 package br.com.sisreq.data.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -12,8 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
@@ -46,13 +44,11 @@ public class Requisicao extends ModeloEntity<Long> {
 	@Column(name = "concluido", nullable = false)
 	private boolean concluido;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "dt_solicitacao", nullable = false)
-	private Date dtSolicitacao;
+	private LocalDateTime dtSolicitacao;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "dt_conclusao")
-	private Date dtConclusao;
+	private LocalDateTime dtConclusao;
 
 	@Column(name = "descricao", columnDefinition = "text", nullable = false)
 	private String descricao;
@@ -134,19 +130,19 @@ public class Requisicao extends ModeloEntity<Long> {
 		this.concluido = concluido;
 	}
 
-	public Date getDtSolicitacao() {
+	public LocalDateTime getDtSolicitacao() {
 		return dtSolicitacao;
 	}
 
-	public void setDtSolicitacao(Date dtSolicitacao) {
+	public void setDtSolicitacao(LocalDateTime dtSolicitacao) {
 		this.dtSolicitacao = dtSolicitacao;
 	}
 
-	public Date getDtConclusao() {
+	public LocalDateTime getDtConclusao() {
 		return dtConclusao;
 	}
 
-	public void setDtConclusao(Date dtConclusao) {
+	public void setDtConclusao(LocalDateTime dtConclusao) {
 		this.dtConclusao = dtConclusao;
 	}
 

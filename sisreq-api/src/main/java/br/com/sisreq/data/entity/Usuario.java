@@ -1,6 +1,6 @@
 package br.com.sisreq.data.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 import br.com.sisreq.data.entity.modelo.ModeloEntity;
@@ -45,9 +43,8 @@ public class Usuario extends ModeloEntity<Long> {
 	@Column(name = "ativo", nullable=false)
 	private boolean ativo;
 	
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "dt_expiracao", nullable=false)
-	private Date dtExpiracao;
+	private LocalDateTime dtExpiracao;
 	
 	@Column(name = "administrador", nullable=false)
 	private boolean administrador;
@@ -128,11 +125,11 @@ public class Usuario extends ModeloEntity<Long> {
 		this.ativo = ativo;
 	}
 
-	public Date getDtExpiracao() {
+	public LocalDateTime getDtExpiracao() {
 		return dtExpiracao;
 	}
 
-	public void setDtExpiracao(Date dtExpiracao) {
+	public void setDtExpiracao(LocalDateTime dtExpiracao) {
 		this.dtExpiracao = dtExpiracao;
 	}
 

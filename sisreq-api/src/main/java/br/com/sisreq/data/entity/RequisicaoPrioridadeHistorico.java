@@ -1,6 +1,6 @@
 package br.com.sisreq.data.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import br.com.sisreq.data.entity.modelo.ModeloEntity;
 
@@ -32,9 +30,8 @@ public class RequisicaoPrioridadeHistorico extends ModeloEntity<Long> {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idRequisicaoPrioridadeHist;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "dt_historico", nullable = false)
-	private Date dtContato;
+	private LocalDateTime dtContato;
 
 	@Column(name = "ativo", nullable = false)
 	private boolean ativo;
@@ -59,11 +56,11 @@ public class RequisicaoPrioridadeHistorico extends ModeloEntity<Long> {
 		this.idRequisicaoPrioridadeHist = idRequisicaoPrioridadeHist;
 	}
 
-	public Date getDtContato() {
+	public LocalDateTime getDtContato() {
 		return dtContato;
 	}
 
-	public void setDtContato(Date dtContato) {
+	public void setDtContato(LocalDateTime dtContato) {
 		this.dtContato = dtContato;
 	}
 
